@@ -166,8 +166,8 @@ let libToastr: NToastNotify = {
         firstLoadEvent: 'DOMContentLoaded',
         globalToastMessageOptions: <ToastrOptions>null,
         messages: [],
-        responseHeaderKey: 'NToastNotify-Messages',
-        requestHeaderKey: 'NToastNotify-Request-Type',
+        responseHeaderKey: 'X-NToastNotify-Messages',
+        requestHeaderKey: 'X-NToastNotify-Request-Type',
         tostrLibCdnSrcScript: 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'
     }
 }
