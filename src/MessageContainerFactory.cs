@@ -13,9 +13,11 @@ namespace NToastNotify
             _httpContextAccessor = httpContextAccessor;
             _tempDataWrapper = tempDataWrapper;
         }
+
         public IMessageContainer Create()
         {
-            if (_httpContextAccessor.HttpContext.Request.IsAjaxRequest())
+            if (_httpContextAccessor?.HttpContext != null &&
+                _httpContextAccessor.HttpContext.Request.IsAjaxRequest())
             {
                 return new InMemoryMessageContainer();
             }
